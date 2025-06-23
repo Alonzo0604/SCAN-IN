@@ -36,8 +36,6 @@ Sistem absensi digital berbasis IoT yang modern, praktis, dan real-time. Menggab
 - Penyimpanan data absensi di Firestore, gambar di Google Cloud Storage
 - Pengaturan jam check-in/out dinamis
 - Sinkronisasi waktu RTC ke perangkat via MQTT
-- Load test & stress test dengan k6 (lihat folder TESTING)
-- File rahasia (serviceAccountKey.json, .env) tidak disertakan di repo
 - Struktur utama:
   - `src/controllers/` – logika API (absensi, user, auth, jadwal, aktivitas)
   - `src/routes/` – endpoint REST API & MQTT
@@ -51,7 +49,7 @@ Sistem absensi digital berbasis IoT yang modern, praktis, dan real-time. Menggab
 - Dashboard real-time: monitoring absensi, aktivitas, status perangkat
 - Kelola pegawai, jadwal, pengaturan jam absensi, rekap kehadiran
 - Form pengaturan jam check-in/out (langsung update ke backend)
-- Komunikasi ke backend via Fetch (AJAX)
+- Komunikasi ke backend via Fetch
 - Tampilan responsif, berbasis HTML, CSS, JavaScript, Bootstrap
 - Struktur utama:
   - `public/admin-dashboard/` – halaman dashboard, absensi, jadwal, pegawai, pengaturan

@@ -36,6 +36,8 @@ Sistem absensi digital berbasis IoT yang modern, praktis, dan real-time. Menggab
 - Penyimpanan data absensi di Firestore, gambar di Google Cloud Storage
 - Pengaturan jam check-in/out dinamis
 - Sinkronisasi waktu RTC ke perangkat via MQTT
+- Load test & stress test dengan k6 (lihat folder TESTING)
+- File rahasia (serviceAccountKey.json, .env) tidak disertakan di repo
 - Struktur utama:
   - `src/controllers/` – logika API (absensi, user, auth, jadwal, aktivitas)
   - `src/routes/` – endpoint REST API & MQTT
@@ -49,10 +51,42 @@ Sistem absensi digital berbasis IoT yang modern, praktis, dan real-time. Menggab
 - Dashboard real-time: monitoring absensi, aktivitas, status perangkat
 - Kelola pegawai, jadwal, pengaturan jam absensi, rekap kehadiran
 - Form pengaturan jam check-in/out (langsung update ke backend)
-- Komunikasi ke backend via Fetch
+- Komunikasi ke backend via Fetch (AJAX)
 - Tampilan responsif, berbasis HTML, CSS, JavaScript, Bootstrap
 - Struktur utama:
   - `public/admin-dashboard/` – halaman dashboard, absensi, jadwal, pegawai, pengaturan
   - `public/assets/` – aset gambar/logo
 
 ---
+
+## 🔗 Preview Web Scan In
+
+<!-- Login -->
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1e2_IxdChnWosdi_f-kQN4xp1ufVG_c67" alt="Dashboard Utama" width="500"/>
+</p>
+<p align="center"><i>Halaman login untuk admin Scan In. Masukkan email dan password untuk mengakses dashboard.</i></p>
+
+<!-- Dashboard Utama -->
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1W2MIAe4k8VwBsrnKd1ORWzUc1nRDCV0p" alt="Dashboard Utama" width="500"/>
+</p>
+<p align="center"><i>Dashboard utama aplikasi Scan In: menampilkan statistik pegawai, jadwal, dan status server.</i></p>
+
+<!-- Mengelola Pegawai -->
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1wTyfkmFAXD6SCgk4qwo4QMwXiTHUBxzW" alt="Kelola Pegawai" width="500"/>
+</p>
+<p align="center"><i>Fitur kelola pegawai: tambah, edit, dan hapus data pegawai beserta fingerprint ID.</i></p>
+
+<!-- Mengelola Jadwal -->
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1AZUX0FlyCfGFFBsvVogeUK1vM61xdiIC" alt="Kelola Jadwal" width="500"/>
+</p>
+<p align="center"><i>Fitur kelola jadwal: atur jam masuk dan keluar untuk setiap hari kerja.</i></p>
+
+<!-- Kehadiran Pegawai -->
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=18C2JTR9cmukj8-U9jkcd9wVcUNaokr6q" alt="Kehadiran Pegawai" width="500"/>
+</p>
+<p align="center"><i>Rekap kehadiran pegawai: monitoring status hadir/tidak hadir setiap hari.</i></p>
